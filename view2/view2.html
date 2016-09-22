@@ -1,0 +1,31 @@
+<div ng-controller="View2Ctrl as cke" layout="column">
+		 
+		<p>This is the partial for view 2.</p>
+		<p>
+		  Showing of 'interpolate' filter:
+		  {{ 'Current version is v%VERSION%.' | interpolate }}
+		</p> 
+
+        
+        <div>
+            <span>Loaded:</span>
+            <span ng-bind="cke.loaded"</span>
+        </div>
+        
+        <div>
+            <span>Content:</span>
+            <span ng-bind="cke.content"></span>
+        </div>
+     
+        <div ckeditor="cke.options"
+             ng-model="cke.content"
+             ready="cke.onReady()">
+	    </div>
+        
+    
+	
+	<button ng-click="proba()">proba</button>
+	
+
+
+</div>
